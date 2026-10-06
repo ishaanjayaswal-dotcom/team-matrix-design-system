@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team Matrix · Instagram post example</title>
+<link rel="stylesheet" href="../tokens/tokens.css">
+<link rel="stylesheet" href="../css/team-matrix.css">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; }
+body { display: grid; place-items: center; min-height: 100vh; padding: 20px; }
+.post { width: min(100%, 540px); aspect-ratio: 1; background: var(--tm-gradient-brand); border-radius: var(--tm-radius-lg); padding: 7%; display: flex; flex-direction: column; justify-content: space-between; }
+.post .tm-display { font-size: clamp(3rem, 15vw, 6.2rem); text-align: right; }
+.foot { display: flex; justify-content: space-between; align-items: end; gap: 12px; }
+</style>
+</head>
+<body class="tm-page">
+<div class="post">
+  <div style="display:flex;justify-content:flex-end"><span class="tm-badge">Season reveal</span></div>
+  <h1 class="tm-display">New game.<br>New robot.<br>BIOBUZZ.</h1>
+  <div class="foot"><img class="tm-logo" src="../assets/logo/team-matrix-logo-white-trimmed.png" alt="Team Matrix #20870" style="width:42%"><span class="tm-label" style="color:var(--tm-text-heading)">Mumbai · 2026–27</span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team Matrix · Sponsor slide example</title>
+<link rel="stylesheet" href="../tokens/tokens.css">
+<link rel="stylesheet" href="../css/team-matrix.css">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; }
+body { display: grid; place-items: center; min-height: 100vh; padding: 20px; }
+.slide { width: min(100%, 1100px); aspect-ratio: 16 / 9; background: var(--tm-bg-main); border: 1px solid var(--tm-border-default); border-radius: var(--tm-radius-md); padding: 4.5%; display: grid; grid-template-rows: auto 1fr; gap: 24px; }
+.top { display: flex; justify-content: space-between; align-items: start; gap: 16px; }
+.tiers { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; align-self: end; }
+@media (max-width: 720px) { .slide { aspect-ratio: auto; } .tiers { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body class="tm-page">
+<div class="slide">
+  <div class="top"><div class="tm-section-head"><span class="tm-label">Sponsorship 2026–27</span><h1 class="tm-h1">Partner with Team Matrix</h1></div><img class="tm-logo" src="../assets/logo/team-matrix-logo-white-trimmed.png" alt="Team Matrix #20870" style="width:150px"></div>
+  <div class="tiers">
+    <div class="tm-tier"><h4 class="tm-h4">Platinum</h4><ul><li>Front of jersey</li><li>Large logo on robot</li><li>Pit banner</li></ul></div>
+    <div class="tm-tier"><h4 class="tm-h4">Gold</h4><ul><li>Jersey</li><li>Logo on robot</li><li>Monthly posts</li></ul></div>
+    <div class="tm-tier"><h4 class="tm-h4">Silver</h4><ul><li>Jersey</li><li>Pit banner</li></ul></div>
+    <div class="tm-tier"><h4 class="tm-h4">Bronze</h4><ul><li>Pit banner</li><li>Thank-you post</li></ul></div>
+  </div>
+</div>
+</body>
+</html>

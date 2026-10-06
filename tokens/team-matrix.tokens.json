@@ -1,0 +1,717 @@
+{
+  "$description": "Team Matrix (FIRST Tech Challenge #20870) design tokens. Format: W3C Design Tokens Format Module 2025.10. Picks confirmed by the team on 6 Oct 2026.",
+  "primitive": {
+    "$description": "Raw brand colours. Use the semantic tokens in your designs, not these directly.",
+    "color": {
+      "$type": "color",
+      "ink": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.0549,
+            0.0471,
+            0.0784
+          ],
+          "hex": "#0E0C14"
+        },
+        "$description": "Team pick: main background. Very dark purple, almost black."
+      },
+      "violet-700": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.3176,
+            0.2196,
+            0.6
+          ],
+          "hex": "#513899"
+        },
+        "$description": "Team pick: second background."
+      },
+      "violet-400": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.6471,
+            0.5451,
+            1.0
+          ],
+          "hex": "#A58BFF"
+        },
+        "$description": "Team pick: accent."
+      },
+      "violet-200": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.8235,
+            0.7686,
+            1.0
+          ],
+          "hex": "#D2C4FF"
+        },
+        "$description": "Derived: lighter accent, readable on the second background."
+      },
+      "lavender-100": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.851,
+            0.8353,
+            0.8863
+          ],
+          "hex": "#D9D5E2"
+        },
+        "$description": "Team pick: body text. Light purple-grey."
+      },
+      "lavender-300": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.651,
+            0.6392,
+            0.6824
+          ],
+          "hex": "#A6A3AE"
+        },
+        "$description": "Derived: muted text. Readable on the main background only."
+      },
+      "white": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hex": "#FFFFFF"
+        },
+        "$description": "Team pick: heading text."
+      },
+      "indigo-logo": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.102,
+            0.0392,
+            0.2549
+          ],
+          "hex": "#1A0A41"
+        },
+        "$description": "Background colour inside the official logo file."
+      },
+      "indigo-600": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.2314,
+            0.1451,
+            0.5216
+          ],
+          "hex": "#3B2585"
+        },
+        "$description": "Gradient middle stop."
+      },
+      "violet-450": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.6196,
+            0.4863,
+            1.0
+          ],
+          "hex": "#9E7CFF"
+        },
+        "$description": "Gradient bright stop."
+      },
+      "ink-raised": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.102,
+            0.0784,
+            0.1725
+          ],
+          "hex": "#1A142C"
+        },
+        "$description": "Derived: 18% step from main toward second background. For inputs and quiet panels."
+      },
+      "amber-400": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            1.0,
+            0.7098,
+            0.2784
+          ],
+          "hex": "#FFB547"
+        },
+        "$description": "Warning."
+      },
+      "rose-400": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            1.0,
+            0.4784,
+            0.5765
+          ],
+          "hex": "#FF7A93"
+        },
+        "$description": "Error or danger."
+      },
+      "alliance-red": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            1.0,
+            0.3529,
+            0.4314
+          ],
+          "hex": "#FF5A6E"
+        },
+        "$description": "FTC red alliance. Match graphics only."
+      },
+      "alliance-blue": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.302,
+            0.5529,
+            1.0
+          ],
+          "hex": "#4D8DFF"
+        },
+        "$description": "FTC blue alliance. Match graphics only."
+      }
+    }
+  },
+  "color": {
+    "$type": "color",
+    "bg": {
+      "main": {
+        "$value": "{primitive.color.ink}",
+        "$description": "Page and slide background."
+      },
+      "second": {
+        "$value": "{primitive.color.violet-700}",
+        "$description": "Cards, panels, highlighted sections."
+      },
+      "subtle": {
+        "$value": "{primitive.color.ink-raised}",
+        "$description": "Inputs, table rows, quiet panels on the main background."
+      },
+      "logo": {
+        "$value": "{primitive.color.indigo-logo}",
+        "$description": "Only behind the original logo file."
+      }
+    },
+    "text": {
+      "heading": {
+        "$value": "{primitive.color.white}",
+        "$description": "All headings. Use on any background."
+      },
+      "body": {
+        "$value": "{primitive.color.lavender-100}",
+        "$description": "Running text. 13.5:1 on main, 6.1:1 on second."
+      },
+      "muted": {
+        "$value": "{primitive.color.lavender-300}",
+        "$description": "Captions and helper text. Main background only (7.8:1). Fails on second (3.6:1)."
+      },
+      "on-accent": {
+        "$value": "{primitive.color.ink}",
+        "$description": "Text on accent-filled buttons and badges (7.2:1)."
+      }
+    },
+    "accent": {
+      "default": {
+        "$value": "{primitive.color.violet-400}",
+        "$description": "Buttons, links and highlights on the main background (7.2:1)."
+      },
+      "on-second": {
+        "$value": "{primitive.color.violet-200}",
+        "$description": "Links and highlights on the second background (5.5:1). The default accent is only 3.3:1 there."
+      }
+    },
+    "border": {
+      "default": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.851,
+            0.835,
+            0.886
+          ],
+          "alpha": 0.14,
+          "hex": "#D9D5E2"
+        },
+        "$description": "Hairlines and card edges. Body colour at 14% opacity."
+      },
+      "strong": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.851,
+            0.835,
+            0.886
+          ],
+          "alpha": 0.32,
+          "hex": "#D9D5E2"
+        },
+        "$description": "Outlined buttons, inputs. Body colour at 32% opacity."
+      },
+      "focus": {
+        "$value": "{primitive.color.white}",
+        "$description": "Keyboard focus ring, 2px."
+      }
+    },
+    "status": {
+      "warning": {
+        "$value": "{primitive.color.amber-400}"
+      },
+      "danger": {
+        "$value": "{primitive.color.rose-400}",
+        "$description": "Main background only for text."
+      }
+    },
+    "alliance": {
+      "red": {
+        "$value": "{primitive.color.alliance-red}"
+      },
+      "blue": {
+        "$value": "{primitive.color.alliance-blue}"
+      }
+    }
+  },
+  "gradient": {
+    "$type": "gradient",
+    "brand": {
+      "$description": "Team pick. CSS: radial-gradient(80% 90% at 17% 27%, #9E7CFF 0%, #3B2585 45%, #1A0A41 100%). Bright spot top-left: keep text on the darker area.",
+      "$value": [
+        {
+          "color": "{primitive.color.violet-450}",
+          "position": 0
+        },
+        {
+          "color": "{primitive.color.indigo-600}",
+          "position": 0.45
+        },
+        {
+          "color": "{primitive.color.indigo-logo}",
+          "position": 1
+        }
+      ],
+      "$extensions": {
+        "org.team-matrix.css": "radial-gradient(80% 90% at 17% 27%, #9E7CFF 0%, #3B2585 45%, #1A0A41 100%)"
+      }
+    }
+  },
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "heading": {
+        "$value": [
+          "Bebas Neue",
+          "Impact",
+          "Arial Narrow",
+          "sans-serif"
+        ],
+        "$description": "Team pick. Capitals only, one weight (400). Google Fonts."
+      },
+      "body": {
+        "$value": [
+          "Poppins",
+          "Segoe UI",
+          "Arial",
+          "sans-serif"
+        ],
+        "$description": "Team pick. Weights 400, 500, 600, 700. Google Fonts."
+      }
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "heading": {
+        "$value": 400,
+        "$description": "Bebas Neue only has 400. Never fake-bold it."
+      },
+      "regular": {
+        "$value": 400
+      },
+      "medium": {
+        "$value": 500
+      },
+      "semibold": {
+        "$value": 600
+      },
+      "bold": {
+        "$value": 700
+      }
+    },
+    "size": {
+      "$type": "dimension",
+      "$description": "Heading sizes include the team's 105% heading scale.",
+      "display": {
+        "$value": {
+          "value": 96,
+          "unit": "px"
+        }
+      },
+      "h1": {
+        "$value": {
+          "value": 68,
+          "unit": "px"
+        }
+      },
+      "h2": {
+        "$value": {
+          "value": 48,
+          "unit": "px"
+        }
+      },
+      "h3": {
+        "$value": {
+          "value": 34,
+          "unit": "px"
+        }
+      },
+      "h4": {
+        "$value": {
+          "value": 25,
+          "unit": "px"
+        }
+      },
+      "body-lg": {
+        "$value": {
+          "value": 18,
+          "unit": "px"
+        }
+      },
+      "body": {
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        }
+      },
+      "small": {
+        "$value": {
+          "value": 14,
+          "unit": "px"
+        }
+      },
+      "caption": {
+        "$value": {
+          "value": 12,
+          "unit": "px"
+        }
+      }
+    }
+  },
+  "typography": {
+    "$type": "typography",
+    "display": {
+      "$value": {
+        "fontFamily": "{font.family.heading}",
+        "fontSize": "{font.size.display}",
+        "fontWeight": "{font.weight.heading}",
+        "lineHeight": 0.92,
+        "letterSpacing": {
+          "value": 0.01,
+          "unit": "rem"
+        }
+      }
+    },
+    "h1": {
+      "$value": {
+        "fontFamily": "{font.family.heading}",
+        "fontSize": "{font.size.h1}",
+        "fontWeight": "{font.weight.heading}",
+        "lineHeight": 0.95,
+        "letterSpacing": {
+          "value": 0.01,
+          "unit": "rem"
+        }
+      }
+    },
+    "h2": {
+      "$value": {
+        "fontFamily": "{font.family.heading}",
+        "fontSize": "{font.size.h2}",
+        "fontWeight": "{font.weight.heading}",
+        "lineHeight": 1,
+        "letterSpacing": {
+          "value": 0.015,
+          "unit": "rem"
+        }
+      }
+    },
+    "h3": {
+      "$value": {
+        "fontFamily": "{font.family.heading}",
+        "fontSize": "{font.size.h3}",
+        "fontWeight": "{font.weight.heading}",
+        "lineHeight": 1.05,
+        "letterSpacing": {
+          "value": 0.02,
+          "unit": "rem"
+        }
+      }
+    },
+    "h4": {
+      "$value": {
+        "fontFamily": "{font.family.heading}",
+        "fontSize": "{font.size.h4}",
+        "fontWeight": "{font.weight.heading}",
+        "lineHeight": 1.1,
+        "letterSpacing": {
+          "value": 0.03,
+          "unit": "rem"
+        }
+      }
+    },
+    "body-lg": {
+      "$value": {
+        "fontFamily": "{font.family.body}",
+        "fontSize": "{font.size.body-lg}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": 1.6,
+        "letterSpacing": {
+          "value": 0,
+          "unit": "rem"
+        }
+      }
+    },
+    "body": {
+      "$value": {
+        "fontFamily": "{font.family.body}",
+        "fontSize": "{font.size.body}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": 1.65,
+        "letterSpacing": {
+          "value": 0,
+          "unit": "rem"
+        }
+      }
+    },
+    "small": {
+      "$value": {
+        "fontFamily": "{font.family.body}",
+        "fontSize": "{font.size.small}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": 1.55,
+        "letterSpacing": {
+          "value": 0,
+          "unit": "rem"
+        }
+      }
+    },
+    "label": {
+      "$value": {
+        "fontFamily": "{font.family.body}",
+        "fontSize": "{font.size.caption}",
+        "fontWeight": "{font.weight.semibold}",
+        "lineHeight": 1.4,
+        "letterSpacing": {
+          "value": 0.12,
+          "unit": "em"
+        }
+      },
+      "$description": "Uppercase eyebrow labels above headings."
+    }
+  },
+  "space": {
+    "$type": "dimension",
+    "$description": "4px base grid.",
+    "1": {
+      "$value": {
+        "value": 4,
+        "unit": "px"
+      }
+    },
+    "2": {
+      "$value": {
+        "value": 8,
+        "unit": "px"
+      }
+    },
+    "3": {
+      "$value": {
+        "value": 12,
+        "unit": "px"
+      }
+    },
+    "4": {
+      "$value": {
+        "value": 16,
+        "unit": "px"
+      }
+    },
+    "5": {
+      "$value": {
+        "value": 20,
+        "unit": "px"
+      }
+    },
+    "6": {
+      "$value": {
+        "value": 24,
+        "unit": "px"
+      }
+    },
+    "8": {
+      "$value": {
+        "value": 32,
+        "unit": "px"
+      }
+    },
+    "10": {
+      "$value": {
+        "value": 40,
+        "unit": "px"
+      }
+    },
+    "12": {
+      "$value": {
+        "value": 48,
+        "unit": "px"
+      }
+    },
+    "16": {
+      "$value": {
+        "value": 64,
+        "unit": "px"
+      }
+    },
+    "24": {
+      "$value": {
+        "value": 96,
+        "unit": "px"
+      }
+    }
+  },
+  "radius": {
+    "$type": "dimension",
+    "sm": {
+      "$value": {
+        "value": 6,
+        "unit": "px"
+      },
+      "$description": "Badges, inputs."
+    },
+    "md": {
+      "$value": {
+        "value": 12,
+        "unit": "px"
+      },
+      "$description": "Buttons, cards."
+    },
+    "lg": {
+      "$value": {
+        "value": 20,
+        "unit": "px"
+      },
+      "$description": "Large panels, image frames."
+    },
+    "pill": {
+      "$value": {
+        "value": 999,
+        "unit": "px"
+      },
+      "$description": "Chips only."
+    }
+  },
+  "shadow": {
+    "$type": "shadow",
+    "card": {
+      "$value": {
+        "color": {
+          "colorSpace": "srgb",
+          "components": [
+            0,
+            0,
+            0
+          ],
+          "alpha": 0.45
+        },
+        "offsetX": {
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": {
+          "value": 12,
+          "unit": "px"
+        },
+        "blur": {
+          "value": 32,
+          "unit": "px"
+        },
+        "spread": {
+          "value": -12,
+          "unit": "px"
+        }
+      }
+    },
+    "glow": {
+      "$value": {
+        "color": {
+          "colorSpace": "srgb",
+          "components": [
+            0.647,
+            0.545,
+            1
+          ],
+          "alpha": 0.45
+        },
+        "offsetX": {
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": {
+          "value": 8,
+          "unit": "px"
+        },
+        "blur": {
+          "value": 28,
+          "unit": "px"
+        },
+        "spread": {
+          "value": -8,
+          "unit": "px"
+        }
+      },
+      "$description": "Hover glow on accent buttons."
+    }
+  },
+  "duration": {
+    "$type": "duration",
+    "fast": {
+      "$value": {
+        "value": 120,
+        "unit": "ms"
+      }
+    },
+    "base": {
+      "$value": {
+        "value": 220,
+        "unit": "ms"
+      }
+    },
+    "slow": {
+      "$value": {
+        "value": 400,
+        "unit": "ms"
+      }
+    }
+  },
+  "easing": {
+    "$type": "cubicBezier",
+    "out": {
+      "$value": [
+        0.2,
+        0.8,
+        0.2,
+        1
+      ]
+    }
+  }
+}

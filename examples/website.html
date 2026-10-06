@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team Matrix · Website example</title>
+<link rel="stylesheet" href="../tokens/tokens.css">
+<link rel="stylesheet" href="../css/team-matrix.css">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 24px 20px 80px; display: grid; gap: 48px; }
+nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+nav .links { display: flex; gap: 20px; font-size: 14px; flex-wrap: wrap; }
+.hero-copy { display: grid; gap: 20px; max-width: 760px; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: start; }
+@media (max-width: 760px) { .split { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body class="tm-page">
+<div class="wrap">
+  <nav><img class="tm-logo" src="../assets/logo/team-matrix-logo-white-trimmed.png" alt="Team Matrix #20870" style="width:150px"><div class="links"><a class="tm-link" href="#">Robot</a><a class="tm-link" href="#">Team</a><a class="tm-link" href="#">Outreach</a><a class="tm-link" href="#">Sponsors</a></div></nav>
+  <section class="tm-hero">
+    <div class="hero-copy" style="margin-left:auto;text-align:right;justify-items:end">
+      <span class="tm-label" style="color:var(--tm-text-heading)"><i>FIRST</i>® Tech Challenge · Team #20870</span>
+      <h1 class="tm-display">Built in Mumbai.<br>Proven at Worlds.</h1>
+      <p class="tm-lead">We design, build and program our own robot every season, from the first CAD sketch to the last line of autonomous code.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end"><a class="tm-btn tm-btn--primary" href="#">Become a sponsor</a><a class="tm-btn tm-btn--secondary" href="#">Meet the team</a></div>
+    </div>
+  </section>
+  <section class="stats">
+    <div class="tm-card"><div class="tm-stat"><span class="tm-stat__value">#1<small>/ 46</small></span><span class="tm-stat__label">Ranked first at the India Championship 2025</span></div></div>
+    <div class="tm-card"><div class="tm-stat"><span class="tm-stat__value">25–2</span><span class="tm-stat__label">Match record, 2024–25 season</span></div></div>
+    <div class="tm-card"><div class="tm-stat"><span class="tm-stat__value">7–0</span><span class="tm-stat__label">Unbeaten in the playoffs at the FIRST Championship 2025</span></div></div>
+  </section>
+  <section class="split">
+    <div class="tm-section-head"><span class="tm-label">Honours</span><h2 class="tm-h2">What we have won</h2><p class="tm-muted">Text in this colour is only used on the main background.</p></div>
+    <ul class="tm-honours">
+      <li><time>24–25</time><span><b>Winning alliance, first pick</b>FIRST Championship finals</span></li>
+      <li><time>24–25</time><span><b>Think Award, 2nd place</b>Ochoa Division</span></li>
+      <li><time>24–25</time><span><b>Inspire Award, 3rd place</b>India Championship</span></li>
+      <li><time>25–26</time><span><b>Sustain Award, 2nd place</b>India Championship</span></li>
+    </ul>
+  </section>
+  <section class="tm-card" style="padding:40px">
+    <span class="tm-label" style="color:var(--tm-accent-on-second)">BIOBUZZ 2026–27</span>
+    <h2 class="tm-h2">Put your brand on our robot</h2>
+    <p class="tm-lead">Your logo on the robot, jerseys and pit banner, at every event we play.</p>
+    <div><a class="tm-btn tm-btn--primary" href="#">See sponsor tiers</a></div>
+  </section>
+</div>
+</body>
+</html>
