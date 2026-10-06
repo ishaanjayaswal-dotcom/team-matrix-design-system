@@ -1,0 +1,180 @@
+/*
+ * Team Matrix Design System — tokens.css  v1.0.0
+ * FTC Team #20870 · Mumbai
+ *
+ * Dark-first. "Midnight" is the default world; "Paper" is the light world.
+ * Set data-theme="light" or data-theme="dark" on <html> to force one.
+ *
+ * Grid concept: everything snaps to the MATRIX CELL. One cell = 16px, one gap = 4px,
+ * one pitch = 20px. The logo is a 5 x 5 grid of cells, so the brand literally is the grid.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+:root {
+  /* ---------- Brand core (fixed, theme-independent) ---------- */
+  --mx-midnight: #0C0A1A;
+  --mx-aubergine: #1C0F33;
+  --mx-plum: #2B1648;
+  --mx-violet: #B77CFF;
+  --mx-violet-deep: #7B3FE4;
+  --mx-aqua: #7FE0E8;
+  --mx-aqua-deep: #0F8C98;
+  --mx-sand: #C9B999;
+  --mx-sand-deep: #6F5B33;
+  --mx-paper: #F7ECF8;
+  --mx-ink: #1A0F2E;
+
+  /* Violet scale */
+  --mx-violet-50: #F6EEFF;
+  --mx-violet-100: #EAD9FF;
+  --mx-violet-200: #D7B8FF;
+  --mx-violet-300: #C69BFF;
+  --mx-violet-400: #B77CFF;
+  --mx-violet-500: #9A5CF5;
+  --mx-violet-600: #7B3FE4;
+  --mx-violet-700: #5F2BB8;
+  --mx-violet-800: #431E85;
+  --mx-violet-900: #2B1648;
+
+  /* Aqua scale */
+  --mx-aqua-50: #EBFBFC;
+  --mx-aqua-100: #CDF4F7;
+  --mx-aqua-200: #A6EBF0;
+  --mx-aqua-300: #7FE0E8;
+  --mx-aqua-400: #4CCAD5;
+  --mx-aqua-500: #23AEBB;
+  --mx-aqua-600: #0F8C98;
+  --mx-aqua-700: #0D6C76;
+  --mx-aqua-800: #0C4E56;
+  --mx-aqua-900: #0A3237;
+
+  /* ---------- Semantic (Midnight / dark default) ---------- */
+  --bg: #0C0A1A;
+  --surface: #150D27;
+  --raised: #1F1236;
+  --line: rgba(247, 236, 248, 0.10);
+  --line-strong: rgba(247, 236, 248, 0.20);
+  --fg: #F7ECF8;
+  --fg-muted: #B9A9C9;
+  --fg-faint: #7E6F92;
+  --primary: #B77CFF;
+  --on-primary: #12081F;
+  --signal: #7FE0E8;
+  --on-signal: #06262A;
+  --honor: #C9B999;
+  --cell-off: rgba(247, 236, 248, 0.09);
+
+  /* FTC alliance colours */
+  --alliance-red: #FF6B7D;
+  --alliance-blue: #6AA2FF;
+
+  /* Status */
+  --ok: #6EE7A8;
+  --warn: #FFC86B;
+  --fail: #FF6B7D;
+
+  /* ---------- Type ---------- */
+  --font-display: "Unbounded", "Arial Black", system-ui, sans-serif;
+  --font-body: "Instrument Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --text-xs: 0.75rem;   /* 12 */
+  --text-sm: 0.875rem;  /* 14 */
+  --text-md: 1rem;      /* 16 */
+  --text-lg: 1.25rem;   /* 20 */
+  --text-xl: 1.75rem;   /* 28 */
+  --text-2xl: 2.5rem;   /* 40 */
+  --text-3xl: 3.5rem;   /* 56 */
+  --text-4xl: 5rem;     /* 80 */
+
+  --tracking-label: 0.14em;
+
+  /* ---------- Space: the matrix cell ---------- */
+  --cell: 16px;
+  --gap: 4px;
+  --pitch: 20px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* ---------- Shape ---------- */
+  --radius-cell: 4px;   /* matches a logo cell (3.5 / 16) */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* ---------- Elevation ---------- */
+  --shadow-1: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 8px 24px -12px rgba(0, 0, 0, 0.6);
+  --glow-primary: 0 0 0 1px rgba(183, 124, 255, 0.5), 0 8px 32px -8px rgba(183, 124, 255, 0.45);
+
+  /* ---------- Motion ---------- */
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-snap: cubic-bezier(0.7, 0, 0.2, 1);
+  --dur-tap: 120ms;
+  --dur-move: 240ms;
+  --dur-scene: 600ms;
+
+  color-scheme: dark;
+}
+
+/* ---------- Paper (light) ---------- */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #F7ECF8;
+    --surface: #FCF6FC;
+    --raised: #FFFFFF;
+    --line: rgba(26, 15, 46, 0.10);
+    --line-strong: rgba(26, 15, 46, 0.22);
+    --fg: #1A0F2E;
+    --fg-muted: #5A4A6E;
+    --fg-faint: #72638A;
+    --primary: #7B3FE4;
+    --on-primary: #FFFFFF;
+    --signal: #0D6C76;
+    --on-signal: #FFFFFF;
+    --honor: #6F5B33;
+    --cell-off: rgba(26, 15, 46, 0.08);
+    --alliance-red: #D62E4A;
+    --alliance-blue: #2560D8;
+    --ok: #13895A;
+    --warn: #A86A00;
+    --fail: #D62E4A;
+    --shadow-1: 0 1px 2px rgba(26, 15, 46, 0.06), 0 12px 28px -16px rgba(26, 15, 46, 0.25);
+    --glow-primary: 0 0 0 1px rgba(123, 63, 228, 0.45), 0 8px 28px -10px rgba(123, 63, 228, 0.4);
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #F7ECF8;
+  --surface: #FCF6FC;
+  --raised: #FFFFFF;
+  --line: rgba(26, 15, 46, 0.10);
+  --line-strong: rgba(26, 15, 46, 0.22);
+  --fg: #1A0F2E;
+  --fg-muted: #5A4A6E;
+  --fg-faint: #72638A;
+  --primary: #7B3FE4;
+  --on-primary: #FFFFFF;
+  --signal: #0D6C76;
+  --on-signal: #FFFFFF;
+  --honor: #6F5B33;
+  --cell-off: rgba(26, 15, 46, 0.08);
+  --alliance-red: #D62E4A;
+  --alliance-blue: #2560D8;
+  --ok: #13895A;
+  --warn: #A86A00;
+  --fail: #D62E4A;
+  --shadow-1: 0 1px 2px rgba(26, 15, 46, 0.06), 0 12px 28px -16px rgba(26, 15, 46, 0.25);
+  --glow-primary: 0 0 0 1px rgba(123, 63, 228, 0.45), 0 8px 28px -10px rgba(123, 63, 228, 0.4);
+  color-scheme: light;
+}
